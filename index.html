@@ -165,7 +165,7 @@
             Our approach first constructs a semantic map of the environment, integrating linguistic queries and skeletal detection to estimate candidate target objects. 
             SSL is utilized to orient the robot toward users who are initially outside its visual field, enabling accurate identification of user gestures and pointing directions. 
             When ambiguities remain, the robot proactively interacts with the user, employing GPT-4o to formulate clarifying questions. 
-            Experiments in a real-world environment showed results that were approximately 1.3 times better when the user was visible to the robot and 2.0 times better when the user was not visible to the robot, compared to the methods without SSL and interactive questioning.
+            Experiments in a real-world environment showed results that were approximately 1.3 times better when the user was visible to the robot and 2.0 times better when the user was not visible to the robot, compared to the methods without SSL and interactive questioning.<br>
             The project website is https://emergentsystemlabstudent.github.io/MIEL/.
           </p>
         </div>
@@ -329,6 +329,11 @@
         <div class="image-container">
           <img src="static/images/visible_result.png" alt="image of model" class="center-image" style="max-width: 80%; height: auto;"/>
         </div>
+        <h2 class="subtitle">
+          We evaluated MIEL under conditions where the user was visible from the robot's initial position. 
+          MIEL outperformed ECRAP with a 1.3× higher SR overall and over 2× higher SR for level-3 queries lacking object class information, highlighting the benefit of interactive clarification. 
+          While MIEL achieved lower SRs than humans (30–60% lower), the gap is attributed to challenges in generating effective questions and the absence of gaze cues, which humans used alongside pointing.
+        </h2>
     </div>
   </div>
 </section>
@@ -342,6 +347,10 @@
         <div class="image-container">
           <img src="static/images/non_visible_result.png" alt="image of model" class="center-image" style="max-width: 80%; height: auto;"/>
         </div>
+        <h2 class="subtitle">
+          When the user is not initially visible, MIEL achieves 3× higher SR than ECRAP by using SSL to locate the user and obtain skeletal data. 
+          This allows MIEL to maintain SR comparable to visible-user conditions, whereas ECRAP's performance drops significantly due to its reliance on limited query information.
+        </h2>
     </div>
   </div>
 </section>
@@ -355,6 +364,11 @@
         <div class="image-container">
           <img src="static/images/ablation_result.png" alt="image of model" class="center-image" style="max-width: 80%; height: auto;"/>
         </div>
+      　<h2 class="subtitle">
+          The ablation study shows that Q&A significantly improves SR for higher-level queries, with level-3 SR more than doubling when Q&A is used.
+          SSL also boosts SR by 1.7×, confirming its role in acquiring user skeletal data when initially unavailable. 
+          Together, these components are crucial for handling ambiguous queries in MIEL.
+        </h2>
     </div>
   </div>
 </section>
