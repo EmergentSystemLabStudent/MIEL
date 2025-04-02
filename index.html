@@ -183,12 +183,17 @@
       <!-- <div id="results-carousel" class="carousel results-carousel"> -->
         <div class="item">
           <div class="image-container">
-            <img src="static/images/overview_martin.svg" alt="image of model" class="center-image"/>
+            <img src="static/images/abstract.svg" alt="image of model" class="center-image"/>
           </div>
           <h2 class="subtitle">
-            The proposed system enhances the reliability of foundation model-based task planning in HRC (blue area) 
-            through comprehension evaluation using an inferred confidence level by the robot agent (green area) and
-            multimodal communication using deictic gestures and speech instructions by the human agent (orange area).
+            This study addresses situations where a user gives a robot an ambiguous
+            command with a demonstrative (e.g., “Take that for me”), especially
+            when the user is outside the robot’s view and non-verbal cues like pointing
+            are unavailable, making it hard to identify what “that” refers to (Left).
+            To address this issue, (a) Utilizing sound source localization to estimate
+            the direction of the user and obtain pointing information. (b) Narrowing
+            down candidate objects by exophora resolution. (c) Supplementing missing
+            information by asking questions using GPT-4o.
           </h2>
         </div>
         <!-- <div class="item">
@@ -219,38 +224,41 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Multimodal Communication and Comprehension Assessment for Task Planning</h2>
+      <h2 class="title is-3">Multimodal Interactive Exophora resolution with user Localization (MIEL)</h2>
       <!-- <div id="results-carousel" class="carousel results-carousel"> -->
         <div class="item">
           <div class="image-container">
-            <img src="static/images/proposed_martin.svg" alt="image of model" class="center-image"/>
+            <img src="static/images/proposed_method.svg" alt="image of model" class="center-image"/>
           </div>
           <h2 class="subtitle">
-            Implementation of the proposed system. The colored areas represent the four modules 
-            of the proposed system: the cloud API, the sensors, the computer, and the robot. 
-            The black arrows indicate the flow of information, while the red lines denote 
-            the types of connections between the modules.
+            An overview of the MIEL. Initially, linguistic queries from the user, including demonstratives, are processed into semantic and visual representations
+            using SentenceBERT and CLIP encoders. A semantic map provides object locations and visual data, while skeletal detection and SSL determine user direction
+            and pointing gestures. Three estimators generate candidate target object probabilities. If the initial identification is ambiguous, GPT-4o engages the user
+            interactively through targeted questions, refining object identification and ensuring robust exophora resolution.
           </h2>
         </div>
-        <!-- <div class="item">
-          <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-          <h2 class="subtitle has-text-centered">
-            Second image description.
-          </h2>
-        </div>
+    </div>
+  </div>
+</section>
+<!-- End image carousel -->
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Interactive Questioning Module</h2>
+      <!-- <div id="results-carousel" class="carousel results-carousel"> -->
         <div class="item">
-          <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-          <h2 class="subtitle has-text-centered">
-            Third image description.
+          <div class="image-container">
+            <img src="static/images/interactive.svg" alt="image of model" class="center-image"/>
+          </div>
+          <h2 class="subtitle">
+            An overview of the module for interactive questioning. The red
+            arrows represent the process flow when the target object is successfully
+            identified, while the blue arrows indicate the process flow when the target
+            object remains unidentified.
           </h2>
         </div>
-        <div class="item">
-          <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-          <h2 class="subtitle has-text-centered">
-            Fourth image description.
-          </h2>
-        </div> -->
-      <!-- </div> -->
     </div>
   </div>
 </section>
@@ -296,17 +304,10 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Experiment1: Task Planning</h2>
+      <h2 class="title is-3">Result1: THE SR OF EXOPHORA RESOLUTION WHEN THE USER IS VISIBLE FROM THE ROBOT’S INITIAL POSITION.</h2>
         <div class="image-container">
-          <img src="static/images/exp1_task_planning.png" alt="image of model" class="center-image" style="max-width: 80%; height: auto;"/>
+          <img src="static/images/visible_result.png" alt="image of model" class="center-image" style="max-width: 80%; height: auto;"/>
         </div>
-      
-        <div class="image-container">
-          <img src="static/images/result1_task_planning.png" alt="image of model" class="center-image" style="max-width: 80%; height: auto;"/>
-          <!-- <iframe  src="static/pdfs/model2.pdf" width="100%" height="550"></iframe> -->
-        </div>
-
-      <!-- </div> -->
     </div>
   </div>
 </section>
@@ -316,16 +317,10 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Experiment2: Comprehension Evaluation</h2>
+      <h2 class="title is-3">Result2: THE SR OF EXOPHORA RESOLUTION WHEN THE USER IS NOT VISIBLE FROM THE ROBOT’S INITIAL POSITION.</h2>
         <div class="image-container">
-          <img src="static/images/exp2_comprehension_evaluation.png" alt="image of model" class="center-image" style="max-width: 80%; height: auto;"/>
+          <img src="static/images/non_visible.png" alt="image of model" class="center-image" style="max-width: 80%; height: auto;"/>
         </div>
-        <div class="image-container">
-          <img src="static/images/result2_comprehension_evaluation.png" alt="image of model" class="center-image" style="max-width: 80%; height: auto;"/>
-          <!-- <iframe  src="static/pdfs/model2.pdf" width="100%" height="550"></iframe> -->
-        </div>
-
-      <!-- </div> -->
     </div>
   </div>
 </section>
@@ -335,17 +330,10 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Experiment3: Multimodal Communication</h2>
+      <h2 class="title is-3">Result3: THE ABLATION STUDY FOR EXOPHORA RESOLUTION. L1, L2, AND L3 INDICATE LEVELS.</h2>
         <div class="image-container">
-          <img src="static/images/exp3_multimodal_communication.png" alt="image of model" class="center-image" style="max-width: 80%; height: auto;"/>
+          <img src="static/images/ablation_result.png" alt="image of model" class="center-image" style="max-width: 80%; height: auto;"/>
         </div>
-        <div class="image-container">
-          <img src="static/images/result3_multimodal_communication.png" alt="image of model" class="center-image" style="max-width: 80%; height: auto;"/>
-          <!-- <iframe src="static/pdfs/model2.pdf" width="100%" height="550"></iframe> -->
-        </div>
-
-
-      <!-- </div> -->
     </div>
   </div>
 </section>
