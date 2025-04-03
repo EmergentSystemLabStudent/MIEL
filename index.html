@@ -324,13 +324,13 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Level of Ambiguous Instructions</h2>
+      <h2 class="title is-3">Level of Ambiguous Instructions for Experiments</h2>
         <h2 class="subtitle">
           Linguistic queries were divided into the following three levels.
           Object features represent attributes expressed through referential terms such as color, shape, and size.
           Level1 queries were created first, followed by level2 and level3 queries, which were generated sequentially by removing information from the level1 queries.
         </h2>
-        <ul>
+        <ul style="list-style-type: disc; padding-left: 20px;">
           <li>Level1: object class， demonstratives， query containing object features (e.g., ``Bring me that stuffed pig.'')</li>
           <li>Level2: object class，query containing a demonstrative (e.g., ``Bring me that doll.'')</li>
           <li>Level3: query containing only a demonstrative (e.g., ``Bring me that.'')</li>
@@ -393,6 +393,53 @@
 </section>
 <!-- End image carousel -->
 
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Prompts</h2>
+      <!-- <div id="results-carousel" class="carousel results-carousel"> -->
+        <div class="item">
+          <div class="image-container">
+            <!-- <img src="static/images/abstract.svg" alt="image of model" class="center-image"/> -->
+            <img src="static/images/prompt_identfy_based_exophora.svg" alt="image of model" style="display: block; margin: 0 auto; width: 70%; height: auto;" />
+          </div>
+          <h2 class="Prompts for Identifying Target Objects based on the Results of Exophora Resolution">
+            LLMs identify target objects by explaining tasks, object images, and information about candidate objects. 
+          </h2>
+        </div>
+        <div class="item">
+          <div class="image-container">
+            <img src="static/images/prompt_ask_user.svg" alt="image of model" style="display: block; margin: 0 auto; width: 70%; height: auto;" />
+          </div>
+          <h2 class="Prompts for Generation a Question">
+            LLMs generate a question to acquire information about the target object.  
+          </h2>
+        </div>
+        <div class="item">
+          <div class="image-container">
+            <img src="static/images/prompt_identify_base_user_answer.svg" alt="image of model" style="display: block; margin: 0 auto; width: 70%; height: auto;" />
+          </div>
+          <h2 class="Prompts for Identifying Target Objects based on User's Answering">
+            LLMs identify target objects by explaining tasks, the user's answer, object images, and information about candidate objects.
+          </h2>
+        </div>
+<!--         <div class="item"> -->
+<!--           <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/> -->
+<!--           <h2 class="subtitle has-text-centered"> -->
+<!--             Fourth image description. -->
+<!--           </h2> -->
+<!--         </div> -->
+      <!-- </div> -->
+    </div>
+  </div>
+</section>
+<!-- End image carousel -->
+
+
+
+  
 <!-- Paper poster -->
 <!-- <section class="hero is-small is-light">
   <div class="hero-body">
