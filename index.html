@@ -273,8 +273,7 @@
             <img src="static/images/demonstrative_estimator.svg" alt="image of model" style="display: block; margin: 0 auto; width: 70%; height: auto;" />
           </div>
           <h2 class="subtitle">
-            The linguistic query-based estimator computes the probability of each candidate object being the target by multiplying and normalizing two cosine similarities: 
-            one between object label features and SentenceBERT-encoded linguistic queries, and the other between visual features and CLIP-encoded queries, all derived from the semantic map.
+            Each region is represented by a 3D Gaussian distribution using the different characters of the demonstrative series. Robot obtains eye and wrist coordinates by MediaPipe (skeleton detector). Coordinates (eye and wrist) are used as parameters of a 3D Gaussian distribution
           </h2>
         </div>
     </div>
@@ -294,8 +293,7 @@
             <img src="static/images/pointing_estimator.svg" alt="image of model" style="display: block; margin: 0 auto; width: 70%; height: auto;" />
           </div>
           <h2 class="subtitle">
-            The linguistic query-based estimator computes the probability of each candidate object being the target by multiplying and normalizing two cosine similarities: 
-            one between object label features and SentenceBERT-encoded linguistic queries, and the other between visual features and CLIP-encoded queries, all derived from the semantic map.
+            After skeleton detection, the robot calculates the angle between the pointing (blue) and the object direction (red). Then, the robot outputs the probability density of a 2D von Mises distribution with the obtained angles. Our model can deal with situations where there are no users in the robot's field of vision.
           </h2>
         </div>
     </div>
@@ -315,10 +313,8 @@
             <img src="static/images/interactive.svg" alt="image of model" style="display: block; margin: 0 auto; width: 70%; height: auto;" />
           </div>
           <h2 class="subtitle">
-            An overview of the module for interactive questioning. The red
-            arrows represent the process flow when the target object is successfully
-            identified, while the blue arrows indicate the process flow when the target
-            object remains unidentified.
+            An overview of the module for interactive questioning. The red arrows represent the process flow when the target object is successfully
+            identified, while the blue arrows indicate the process flow when the target object remains unidentified.
           </h2>
         </div>
     </div>
