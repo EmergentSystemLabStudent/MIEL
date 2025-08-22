@@ -364,15 +364,11 @@
     <div class="container">
       <h2 class="title is-3">Level of Ambiguous Instructions for Experiments</h2>
         <h2 class="subtitle">
-          Linguistic queries were divided into the following three levels.
-          Object features represent attributes expressed through referential terms such as color, shape, and size.
-          Level1 queries were created first, followed by level2 and level3 queries, which were generated sequentially by removing information from the level1 queries.
+          Divided queries into three levels, and manually created each of the 30 queries in Japanese.
         </h2>
-        <ul style="list-style-type: disc; padding-left: 20px;">
-          <li>Level1: object class， demonstratives， query containing object features (e.g., ``Bring me that stuffed pig.'')</li>
-          <li>Level2: object class，query containing a demonstrative (e.g., ``Bring me that doll.'')</li>
-          <li>Level3: query containing only a demonstrative (e.g., ``Bring me that.'')</li>
-        </ul>
+		<div class="image-container">
+            <img src="static/images/query.svg" alt="image of model" style="display: block; margin: 0 auto; width: 70%; height: auto;" />
+        </div>
     </div>
   </div>
 </section>
@@ -382,13 +378,13 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Result1: The SR of Exophora Resolution When the User is Visble from the Robot’s Initial Position.</h2>
+      <h2 class="title is-3">Result-1: Case of User is Visible from the Robot’s Position</h2>
         <div class="image-container">
           <img src="static/images/visible_result.png" alt="image of model" class="center-image" style="max-width: 80%; height: auto;"/>
         </div>
         <h2 class="subtitle">
           We evaluated MIEL under conditions where the user was visible from the robot's initial position. 
-          MIEL outperformed ECRAP with a 1.3× higher SR overall and over 2× higher SR for level-3 queries lacking object class information, highlighting the benefit of interactive clarification. 
+          MIEL outperformed ECRAP with a 1.3× higher SR (success rate) overall and over 2× higher SR for level-3 queries lacking object class information, highlighting the benefit of interactive clarification. 
           While MIEL achieved lower SRs than humans (30–60% lower), the gap is attributed to challenges in generating effective questions and the absence of gaze cues, which humans used alongside pointing.
         </h2>
     </div>
@@ -400,7 +396,7 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Result2: The SR of Exophora Resolution When the User is not Visble from the Robot’s Initial Position.</h2>
+      <h2 class="title is-3">Result-2: Case of User is Invisible from the Robot’s Position</h2>
         <div class="image-container">
           <img src="static/images/non_visible_result.png" alt="image of model" class="center-image" style="max-width: 80%; height: auto;"/>
         </div>
@@ -417,7 +413,7 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Result3: The Ablation Study for Exophora Resolution. L1, L2, and L3 Indicate Levels.</h2>
+      <h2 class="title is-3">Result-3: The Ablation Study for Exophora Resolution. L1, L2, and L3 Indicate Levels.</h2>
         <div class="image-container">
           <img src="static/images/ablation_result.png" alt="image of model" class="center-image" style="max-width: 80%; height: auto;"/>
         </div>
@@ -444,7 +440,7 @@
             <img src="static/images/prompt_identfy_based_exophora.svg" alt="image of model" style="display: block; margin: 0 auto; width: 70%; height: auto;" />
           </div>
           <h3 class="title is-5" style="text-align: center; margin-top: 1em; margin-bottom: 2em;">
-          　Prompts for Identifying Target Objects based on the Results of Exophora Resolution
+          　(1) Prompts for Identifying Target Objects based on the Results of Exophora Resolution
           </h3>
         </div>
         <div class="item" style="margin-bottom: 1em;">
@@ -452,7 +448,7 @@
             <img src="static/images/prompt_ask_user.svg" alt="image of model" style="display: block; margin: 0 auto; width: 70%; height: auto;" />
           </div>
           <h3 class="title is-5" style="text-align: center; margin-top: 1em; margin-bottom: 2em;">
-          　Prompts for Generation a Question
+          　(2) Prompts for Generation a Question
           </h3>
         </div>
         <div class="item" style="margin-bottom: 1em;">
@@ -460,7 +456,7 @@
             <img src="static/images/prompt_identify_base_user_answer.svg" alt="image of model" style="display: block; margin: 0 auto; width: 70%; height: auto;" />
           </div>
           <h3 class="title is-5" style="text-align: center; margin-top: 1em; margin-bottom: 2em;">
-          　Prompts for Identifying Target Objects based on User's Answering
+          　(3) Prompts for Identifying Target Objects based on User's Answering
           </h3>
         </div>
 <!--         <div class="item"> -->
